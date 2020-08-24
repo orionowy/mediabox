@@ -20,6 +20,7 @@ services:
       - PGID=${PGID}
       - TZ=${TIMEZONE}
     volumes:
-      - ${DELUGE}/config:/config
-      - ${TORRENT_DOWNLOADS}:/downloads
+      - ${CONTAINERS}/deluge/config:/config
+      - ${DOWNLOADS}/torrents/complete:/data/downloads/torrents/complete
+      - ${DOWNLOADS}/torrents/incomplete:/data/downloads/torrents/incomplete
     restart: unless-stopped

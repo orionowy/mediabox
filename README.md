@@ -38,11 +38,8 @@ docker-compose -f docker-compose.yml -f docker-compose.torrents.yml up -d
 # Main stack + VPN Protected Torrenting
 docker-compose -f docker-compose.yml -f docker-compose.torrents-on-vpn.yml up -d
 
-# Main stack + VPN Protected Torrenting + Extra disk volumes
-docker-compose -f docker-compose.yml -f docker-compose.torrents-on-vpn.yml -f docker-compose.volumes.yml up -d
-
-# Main stack + VPN Protected Torrenting + Extra disk volumes + Plex HW Transcoding
-docker-compose -f docker-compose.yml -f docker-compose.torrents-on-vpn.yml -f docker-compose.volumes.yml -f docker-compose.plex-hw.yml up -d
+# Main stack + VPN Protected Torrenting + Plex HW Transcoding
+docker-compose -f docker-compose.yml -f docker-compose.torrents-on-vpn.yml -f docker-compose.plex-hw.yml up -d
 ```
 
 ## Stopping
